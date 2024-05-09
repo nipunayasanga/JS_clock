@@ -1,4 +1,4 @@
-
+/* Apply a global reset to remove default margin and padding, set font, and center content */
 body {
   margin: 0;
   padding: 0;
@@ -10,27 +10,28 @@ body {
   background-color: salmon;
 }
 
+/* Style for the clock image */
 img {
   position: absolute;
   top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; /* Position image horizontally centered */
+  transform: translateX(-50%); /* Center image precisely */
   width: 70px;
-  z-index: 2;
+  z-index: 2; /* Ensure it's above other elements */
 }
 
+/* Styling for the clock container */
 .clock {
   width: 350px;
   height: 350px;
   background-color: lightgray;
-  border-radius: 100%;
+  border-radius: 100%; /* Create a circular shape */
   border: 5px solid darkgrey;
-  box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+  box-shadow: 1px 1px 4px rgba(0,0,0,.7); /* Add a shadow effect */
   position: relative;
 }
 
-
-
+/* Styling for clock numbers */
 .numbers div {
   position: absolute;
   font-size: 27px;
@@ -39,6 +40,7 @@ img {
   text-shadow: 1px 1px 2px rgba(0,0,0,.7);
 }
 
+/* Positioning of clock numbers */
 .twelve {
   top: 6px;
   left: 50%;
@@ -63,6 +65,7 @@ img {
   transform: translateY(-50%);
 }
 
+/* Styling for clock hands container */
 .arrows {
   width: 100%;
   height: 100%;
@@ -71,37 +74,38 @@ img {
   align-items: center;
 }
 
+/* Styling for clock hands base */
 .arrows::before {
   content: "";
   width: 25px;
   height: 25px;
   background-color: darkgreen;
-  border-radius: 50%;
+  border-radius: 50%; /* Create a circular base */
   box-shadow: 1px 1px 2px rgba(0,0,0,.7);
-  z-index: 4;
+  z-index: 4; /* Above clock hands */
 }
 
+/* Styling for clock hands */
 .arrows div {
   width: 7px;
   height: 120px;
   background-color: white;
   position: absolute;
-  bottom: 50%;
+  bottom: 50%; /* Align to the bottom center of the clock */
   box-shadow: 1px 1px 2px rgba(0,0,0,.7);
-  border-radius: 50% 50% 0 0;
-  transform-origin: bottom center;
-  z-index: 3;
+  border-radius: 50% 50% 0 0; /* Rounded tip for clock hands */
+  transform-origin: bottom center; /* Rotate around the bottom center point */
+  z-index: 3; /* Above clock base */
 }
 
+/* Hour hand styling */
 .arrows .hour {
-  height: 80px;
-  transform: rotate(30deg);
+  height: 80px; /* Shorter hour hand */
+  transform: rotate(30deg); /* Initial position */
 }
 
+/* Second hand styling */
 .arrows .second {
-  background-color: goldenrod;
-  transform: rotate(250deg);
- 
+  background-color: goldenrod; /* Color for the second hand */
+  transform: rotate(250deg); /* Initial position */
 }
-
-
